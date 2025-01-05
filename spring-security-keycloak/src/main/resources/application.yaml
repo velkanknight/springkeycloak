@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: spring-security-keycloak
+            client-secret: mQNQugcLfXQyVTJbyZVlXdHMtbcWl8qP
+            scope: openid, profile, email
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:7080/realms/realm_teste
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:7080/realms/realm_teste
